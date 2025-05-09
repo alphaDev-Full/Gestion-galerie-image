@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.demo1.HelloController">
+    <BorderPane fx:id="mainPane" prefWidth="800" prefHeight="600" style="-fx-background-color: black;">
+        <top>
+            <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+                <!-- Zone d’ajout de tag -->
+                <HBox spacing="10" alignment="CENTER">
+                    <TextField fx:id="tagTextField" promptText="Entrez un tag" />
+                    <Button fx:id="addTagButton" text="Ajouter Tag" />
+                    <Button fx:id="searchButton" text="Rechercher Image" />
+                    <Button fx:id="resetButton" text="Nouveau Tag" />
+                </HBox>
+            </VBox>
+        </top>
+        <center>
+            <StackPane prefWidth="400" prefHeight="400" style="-fx-alignment: center;">
+                <ImageView fx:id="imageView" preserveRatio="true"/>
+            </StackPane>
+        </center>
+
+
+        <!-- Boutons en bas -->
+        <bottom>
+            <VBox alignment="center" spacing="15" style="-fx-padding: 10;">
+
+                <!-- Bouton visible dès le début -->
+                <Button fx:id="loadButton" text="Charger une image" style="
+                    -fx-font-size: 14px;
+                    -fx-background-color: #3498db;
+                    -fx-text-fill: white;
+                    -fx-padding: 10px 20px;
+                    -fx-font-weight: bold;
+                    -fx-border-radius: 10px;
+                    -fx-background-radius: 10px;
+                    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);
+                "/>
+
+                <!-- Tous les autres boutons sont invisibles au départ -->
+
+                <!-- Le conteneur principal qui englobe tous les groupes de boutons -->
+                <HBox alignment="CENTER" spacing="20"> <!-- Centrage horizontal & espacement entre groupes -->
+
+                    <!-- Groupe des filtres -->
+                    <VBox alignment="CENTER" style="-fx-padding: 5 0 0 0;">
+                        <Button fx:id="filtererButton" text="Appliquer un filtre" style="
+                    -fx-font-size: 12px;
+                    -fx-background-color: green;
+                    -fx-text-fill: white;
+                    -fx-padding: 10px 10px;
+                    -fx-font-weight: bold;
+                    -fx-border-radius: 10px;
+                    -fx-background-radius: 10px;
+                    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"
+                        />
+
+                        <!-- Sous-groupe contenant les filtres -->
+                        <HBox spacing="15">
+                            <VBox spacing="10" style="-fx-padding: 7 0 0 3;">
+                                <Button fx:id="grayscaleButton" text="Grayscale" style="
+                                -fx-font-size: 10px;
+                                -fx-background-color: gray;
+                                -fx-text-fill: white;
+                                -fx-padding: 5px 5px;
+                                -fx-font-weight: bold;
+                                -fx-border-radius: 10px;
+                                -fx-background-radius: 10px;
+                                -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);" />
+                                <Button fx:id="swapRGBButton" text="Swap RGB"  style="
+                                -fx-font-size: 10px;
+                                -fx-background-color: gray;
+                                -fx-text-fill: white;
+                                -fx-padding: 5px 5px;
+                                -fx-font-weight: bold;
+                                -fx-border-radius: 10px;
+                                -fx-background-radius: 10px;
+                                -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"/>
+                            </VBox>
+                            <VBox spacing="10" style="-fx-padding: 7 0 0 3;">
+                                <Button fx:id="sepiaButton" text="Sepia"  style="
+                                -fx-font-size: 10px;
+                                -fx-background-color: gray;
+                                -fx-text-fill: white;
+                                -fx-padding: 5px 5px;
+                                -fx-font-weight: bold;
+                                -fx-border-radius: 10px;
+                                -fx-background-radius: 10px;
+                                -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"/>
+                                <Button fx:id="sobelButton" text="Sobel"  style="
+                                -fx-font-size: 10px;
+                                -fx-background-color: gray;
+                                -fx-text-fill: white;
+                                -fx-padding: 5px 5px;
+                                -fx-font-weight: bold;
+                                -fx-border-radius: 10px;
+                                -fx-background-radius: 10px;
+                                -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"/>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Groupe rotation -->
+                    <VBox style="-fx-padding: 5 0 0 0;">
+                        <Button fx:id="rotateButton" text="Rotation" style="
+                    -fx-font-size: 12px;
+                    -fx-background-color: green;
+                    -fx-text-fill: white;
+                    -fx-padding: 10px 10px;
+                    -fx-font-weight: bold;
+                    -fx-border-radius: 10px;
+                    -fx-background-radius: 10px;
+                    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"
+                        />
+                    </VBox>
+
+                    <!-- Groupe symétrie -->
+                    <VBox spacing="10" style="-fx-padding: 5 0 0 0;">
+                        <Button fx:id="symetrie" text="Symétries" style="
+                    -fx-font-size: 12px;
+                    -fx-background-color: green;
+                    -fx-text-fill: white;
+                    -fx-padding: 10px 10px;
+                    -fx-font-weight: bold;
+                    -fx-border-radius: 10px;
+                    -fx-background-radius: 10px;
+                    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"/>
+                        <Button fx:id="mirrorButton" text="Symétrie H"  style="
+                                -fx-font-size: 10px;
+                                -fx-background-color: gray;
+                                -fx-text-fill: white;
+                                -fx-padding: 5px 5px;
+                                -fx-font-weight: bold;
+                                -fx-border-radius: 10px;
+                                -fx-background-radius: 10px;
+                                -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"/>
+                        <Button fx:id="verticalMirrorButton" text="Symétrie V"  style="
+                                -fx-font-size: 10px;
+                                -fx-background-color: gray;
+                                -fx-text-fill: white;
+                                -fx-padding: 5px 5px;
+                                -fx-font-weight: bold;
+                                -fx-border-radius: 10px;
+                                -fx-background-radius: 10px;
+                                -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"/>
+                    </VBox>
+
+
+                    <!-- Groupe zoom -->
+                    <VBox style="-fx-padding: 5 0 0 0;" spacing="10">
+                        <Button fx:id="zoom" text="Zoom" style="
+                    -fx-font-size: 12px;
+                    -fx-background-color: green;
+                    -fx-text-fill: white;
+                    -fx-padding: 10px 10px;
+                    -fx-font-weight: bold;
+                    -fx-border-radius: 10px;
+                    -fx-background-radius: 10px;
+                    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"
+                        />
+                        <Button fx:id="zoomInButton"  text="+"  style="
+                                -fx-font-size: 10px;
+                                -fx-background-color: gray;
+                                -fx-text-fill: white;
+                                -fx-padding: 5px 5px;
+                                -fx-font-weight: bold;
+                                -fx-border-radius: 10px;
+                                -fx-background-radius: 10px;
+                                -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"/>
+                        <Button fx:id="zoomOutButton" text="-"  style="
+                                -fx-font-size: 10px;
+                                -fx-background-color: gray;
+                                -fx-text-fill: white;
+                                -fx-padding: 5px 5px;
+                                -fx-font-weight: bold;
+                                -fx-border-radius: 10px;
+                                -fx-background-radius: 10px;
+                                -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);"/>
+                    </VBox>
+
+                    <!-- Groupe annuler -->
+                    <VBox style="-fx-padding: 5 0 0 0;">
+                        <Button fx:id="undoButton" text="Annuler" style="
+                    -fx-font-size: 12px;
+                    -fx-background-color: red;
+                    -fx-text-fill: white;
+                    -fx-padding: 10px 10px;
+                    -fx-font-weight: bold;
+                    -fx-border-radius: 10px;
+                    -fx-background-radius: 10px;
+                    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);" />
+                    </VBox>
+
+                    <VBox style="-fx-padding: 5 0 0 0;">
+                        <Button fx:id="redoButton" text="Rétablir" visible="false"  style="
+                    -fx-font-size: 12px;
+                    -fx-background-color: red;
+                    -fx-text-fill: white;
+                    -fx-padding: 10px 10px;
+                    -fx-font-weight: bold;
+                    -fx-border-radius: 10px;
+                    -fx-background-radius: 10px;
+                    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 3);" />
+                    </VBox>
+
+                </HBox>
+            </VBox>
+        </bottom>
+    </BorderPane>
+</StackPane>

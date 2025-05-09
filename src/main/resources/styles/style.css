@@ -1,0 +1,42 @@
+/* Fond de la fenêtre */
+.root {
+    -fx-background-color: black;
+}
+
+/* Style du bouton de chargement */
+#loadButton {
+    -fx-background-color: #007BFF;  /* Couleur bleue */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+/* Style du bouton pour ajouter des tags */
+#addTagButton {
+    -fx-background-color: #28a745;  /* Couleur verte */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+/* Style de la ListView (affichage des tags) */
+#tagsListView {
+    -fx-background-color: white;
+    -fx-font-size: 14px;
+    -fx-border-color: #007BFF;  /* Bordure bleue */
+    -fx-border-width: 2px;
+}
+
+/* Style du champ de texte */
+#tagTextField {
+    -fx-pref-width: 200px;
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+}
+
+/* Espacement et alignement dans le VBox */
+.vbox {
+    -fx-alignment: center;
+    -fx-spacing: 20px;
+    -fx-padding: 10px;
+}

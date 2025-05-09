@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Apr 17 19:57:59 CEST 2025:
+Amorçage de Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) : instance a816c00e-0196-44e6-8345-000005be3cb8 
+dans le répertoire de base de données C:\Users\étudiant\IdeaProjects\demo1\monDB avec le chargeur de classe jdk.internal.loader.ClassLoaders$AppClassLoader@30f39991
+Chargé de file:/C:/Apache/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=24+36-3646
+user.dir=C:\Users\étudiant\IdeaProjects\demo1
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Chargeur de classe de la base de données démarré - derby.database.classpath = ''
