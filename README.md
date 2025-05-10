@@ -58,8 +58,13 @@ Le projet suit le paradigme **MVC** :
     - Utilisez IntelliJ IDEA, Eclipse ou NetBeans.
     - Ouvrez le dossier extrait ou importez-le comme projet Java.
 3. **Prérequis** :
-    - Java 11 ou supérieur installé.
+    - Java 17 ou supérieur installé.
     - JavaFX configuré dans votre environnement.
     - Derby (JavaDB) installé ou intégré
 4. **Lancer l'application**:
    - Exécutez la classe (HelloApplication) -- \src\main\java\com\example\demo1\HelloApplication.java
+## 📚 Technologies utilisées
+   - Java 22
+   - JavaFX
+   - JDBC
+   - Derby (JavaDB)
