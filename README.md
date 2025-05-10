@@ -44,7 +44,6 @@ Le projet suit le paradigme **MVC** :
 - `model/` → Classes métier, traitement des images, tags, filtres.
 - `view/` → Fichiers `.fxml` (interface utilisateur).
 - `controller/` → Contrôleurs JavaFX.
-- `utils/` → Fonctions utilitaires (IO, chiffrement...).
 - `resources/` → Images et fichiers nécessaires.
 
 ---
@@ -56,11 +55,11 @@ Le projet suit le paradigme **MVC** :
    - Cliquez sur le bouton vert **Code** → **Download ZIP**.
    - Extrayez le fichier ZIP sur votre machine.
 2. **Ouvrir dans un IDE**:
-    -Utilisez IntelliJ IDEA, Eclipse ou NetBeans.
-    -Ouvrez le dossier extrait ou importez-le comme projet Java.
+    - Utilisez IntelliJ IDEA, Eclipse ou NetBeans.
+    - Ouvrez le dossier extrait ou importez-le comme projet Java.
 3. **Prérequis** :
-    -Java 11 ou supérieur installé.
-    -JavaFX configuré dans votre environnement.
-    -Derby (JavaDB) installé ou intégré
+    - Java 11 ou supérieur installé.
+    - JavaFX configuré dans votre environnement.
+    - Derby (JavaDB) installé ou intégré
 4. **Lancer l'application**:
    - Exécutez la classe (HelloApplication) -- \src\main\java\com\example\demo1\HelloApplication.java
