@@ -20,7 +20,7 @@ Créer une application Java respectant l’architecture MVC avec une interface J
 
 ![aperçu](captures/accueil.gif)
 
-> GIF illustrant les principales fonctionnalités de l'application (chargement d’image, filtres, tags...).
+> 
 
 ---
 
